@@ -23,11 +23,13 @@ body {
   height: 300px;
   background: linear-gradient(
     to right,
-    #f9f9f9,
-    #d7d7d7,
+    #eeeef0,
+    #eeeef0,
+    #eeeef0,
     #eeeef0,
     #d9d9d9,
-    #d9d9d9
+    #d9d9d9,
+    #f8ffff
   );
   border-bottom-left-radius: 44%;
   border-bottom-right-radius: 44%;
@@ -42,8 +44,7 @@ body {
   color: bisque;
   font-family: poppins;
   font-size: x-small;
-  text-shadow: 2px 2px 2px
-  rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
@@ -53,13 +54,7 @@ body {
   left: 0;
   width: 100%;
   height: 60px;
-  background: linear-gradient(
-    to right,
-  #f9f9f9,
-  #eeeef0,
-  #d9d9d9,
-  #d9d9d9
-  );
+  background: linear-gradient(to right, #f9f9f9, #eeeef0, #f0fffb, #d9d9d9);
   border-radius: 50%;
 }
 
@@ -69,13 +64,7 @@ body {
   left: 10px;
   width: calc(100% - 22px);
   height: 50px;
-  background: linear-gradient(
-    to left
-    #f9f9f9,
-    #eeeef0,
-    #d9d9d9,
-    #d9d9d9
-  );
+  background: linear-gradient(to left #f9f9f9, #eeeef0, #f7ffff, #d9d9d9);
   border-radius: 50%;
   box-sizing: border-box;
   overflow: hidden;
@@ -98,18 +87,6 @@ body {
   border-radius: 47%;
 }
 
-.handle {
-  position: absolute;
-  right: -81px;
-  top: 42px;
-  width: 165px;
-  height: 178px;
-  border: 26px solid #d9d9d9;
-  border-left: 29px solid transparent;
-  border-radius: 46%;
-  transform: rotate(2deg);
-}
-
 .plate {
   position: absolute;
   bottom: -90px;
@@ -122,18 +99,13 @@ body {
     #d6dbda,
     #f3eeee,
     #b2bebc,
-    #b3b1b1,
-    #ddcfcf
+    #e0ecf3,
+    #ffffff
   );
   border: 1px solid #d1d1d1;
   border-radius: 55%;
-  box-shadow:
-  0 35px 35px
-  rgba(0, 0, 0, 0.2),
-  0 5px 15px
-  rgba(0, 0, 0, 0.15),
-  0 2px 5px
-  rgba(0, 0, 0, 0.1);
+  box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.15),
+    0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .plate::before {
@@ -147,9 +119,9 @@ body {
     circle at 30% 40%,
     #f3eeee 0%,
     #d6dbda 30%,
-    #b2bebc 60%,
-    #b3b1b1 90%,
-    #ddcfcf 100%
+    #bbebe3 60%,
+    #adc9ec 90%,
+    #ebf2f7 100%
   );
   border-radius: 55%;
   z-index: -1;
@@ -158,15 +130,11 @@ body {
 .plate::after {
   content: "";
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 500px;
+  top: 30px;
+  right: 8px;
+  width: 400px;
   height: 200px;
-  background: radial-gradient(
-    rgb(223, 201, 201) 15%,
-    transparent,
-    transparent
-  );
+  background: radial-gradient(rgb(124, 122, 122) 15%, transparent, transparent);
   border-radius: 50%;
   z-index: -1;
 }
@@ -179,10 +147,47 @@ body {
   width: 450px;
   height: 220px;
   border-radius: 50%;
-  background: radial-gradient(
-    rgb(238, 230, 230),
-    rgba(228, 204, 204, 0)
-  );
-  box-shadow: inset 1px 0 5px 
-  rgba(209, 208, 208, 0.822);
+  background: radial-gradient(rgb(255, 255, 255), rgba(228, 204, 204, 0));
+  box-shadow: inset 1px 0 5px rgba(203, 204, 204, 0.822);
+}
+
+.vapour {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.vapour span {
+  position: relative;
+  bottom: 50px;
+  display: block;
+  margin: 0 0.5px 50px;
+  min-width: 8px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  filter: blur(8px);
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-300px) scaleX(10);
+  }
 }
