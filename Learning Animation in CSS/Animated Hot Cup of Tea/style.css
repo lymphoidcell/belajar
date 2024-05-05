@@ -64,7 +64,13 @@ body {
   left: 10px;
   width: calc(100% - 22px);
   height: 50px;
-  background: linear-gradient(to left #f9f9f9, #eeeef0, #f7ffff, #d9d9d9);
+  background: linear-gradient(
+    to left
+    #f9f9f9,
+    #eeeef0,
+    #f7ffff,
+    #d9d9d9
+    );
   border-radius: 50%;
   box-sizing: border-box;
   overflow: hidden;
@@ -97,10 +103,10 @@ body {
   background: linear-gradient(
     to right,
     #d6dbda,
-    #f3eeee,
-    #b2bebc,
+    #d6efff,
+    #afcdd4,
     #e0ecf3,
-    #ffffff
+    #e6fdff
   );
   border: 1px solid #d1d1d1;
   border-radius: 55%;
