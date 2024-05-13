@@ -11,7 +11,7 @@ const AboutPage = () => {
         I felt hurt about everything you did and you might not realized it.
         I felt like I am not enough for you, and I never will. And your actions toward me speak for how I feel.
         Just so you know, whenever I choose to leave, I will always be waiting for you.
-        For the sake of my well-being. I will give up one day about waiting for you.
+        But for the sake of my well-being. I will give up one day about waiting for you.
       </p>
     </div>
   );
