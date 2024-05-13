@@ -64,13 +64,7 @@ body {
   left: 10px;
   width: calc(100% - 22px);
   height: 50px;
-  background: linear-gradient(
-    to left
-    #f9f9f9,
-    #eeeef0,
-    #f7ffff,
-    #d9d9d9
-    );
+  background: linear-gradient(to left #f9f9f9, #eeeef0, #f7ffff, #d9d9d9);
   border-radius: 50%;
   box-sizing: border-box;
   overflow: hidden;
@@ -199,14 +193,14 @@ body {
 }
 
 .wavy {
-  position: relative;
+  position: absolute;
 }
 
 .wavy span {
   position: relative;
-  top: -250px;
+  top: -150px;
   display: inline-block;
   color: #f8ffff;
-  font-size:60px;
-  animation: animate 6s ease-in-out infinite;
+  font-size: 60px;
+  animation: animate 10s ease-in-out infinite;
 }
