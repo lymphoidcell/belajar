@@ -1,3 +1,5 @@
+// fungsinya sama dengan main.jsx di react
+
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 
