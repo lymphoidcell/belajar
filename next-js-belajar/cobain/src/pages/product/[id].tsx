@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 
 const DetailProductPage = () => {
     const router = useRouter();
-    console.log(router);
+    console.log(router); // kok ga keliatan consolenya?
     return (
         <div>
             <h1>Detail Product</h1>
