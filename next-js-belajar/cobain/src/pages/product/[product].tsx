@@ -5,7 +5,7 @@ const DetailProductPage = () => {
     return ( // bisa digunakan untuk data fetching ke API
         <div>
             <h1>Detail Product</h1>
-            <p>Product : {query.id} </p>
+            <p>Product : {query.product} </p>
         </div>
     );
 };
